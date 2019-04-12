@@ -198,7 +198,7 @@ This guide assumes you have some experience in setting up PHP based web applicat
 
     <p>The server on which you are going to deploy the backend must fulfill the following requirements:</p>
     <ul>
-      <li>PHP &gt;= 7.0.0</li>
+      <li>PHP &gt;= 7.2</li>
       <li>Mysql 5.7</li>
       <li>OpenSSL PHP Extension</li>
       <li>PDO PHP Extension</li>
@@ -283,6 +283,25 @@ Set following values in .env:</p>
   <li>
     <h3 id="database">Database</h3>
     <p>In accompanied source code you will find a sql file named chefqu_master.sql. Create the database and then import the file in your database.</p>
+  </li>
+  <li>
+    <h3 id="admin-panel">Admin Panel</h3>
+    <p>Admin panel is developed in Angular 7 and shipped in seperate folder. Normally you will not need to compile the files again for your deployment. If you are not going to make any change in Admin Panel source code, you can skip the angular compiling step.
+  Following change in the file will still be required in any case:</p>
+    <ul>
+      <li>Open <code class="highlighter-rouge">public/admin/main.main.33d7d7e4287b585cb872.js.js</code> or if you do not see this specific file open <code class="highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
+      <li>Update Base Url - Search for <code class="highlighter-rouge">http://opuslabs.in:9081/api/admin</code> and replace it with your backend url for example <code class="highlighter-rouge">http://cookfu.com/cookfu/public/api/admin</code></li>
+      <li>Update Project Title - Search for <code class="highlighter-rouge">Cookfu</code> and replace it with your project title</li>
+      <li>Update Google Maps Key - Locate <code class="highlighter-rouge">GOOGLE_MAPS_API_KEY</code> variable in file and replace it’s value with your Google Maps Api Key</li>
+      <li>This is a just a quicker way to make ready your admin panel so that you do not have to compile whole angular project, if you want to customize source as per your requiremtn you will need to follow steps mentione below. If you do not want customization you can stop at these step.</li>
+      <li>Open <code class="highlighter-rouge">cookfu-admin.zip</code>, it’s an Angualr 7 based project</li>
+      <li>If you are not familiar with Angular 7 we will suggest you to get basic idea from <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></li>
+      <li>If you need to change api url, open <code class="highlighter-rouge">src/app/@core/models/constants.model.ts</code> and update the value of <code class="highlighter-rouge">API_BASE_URL</code>  variable</li>
+      <li>After making the required changes issue a command <code class="highlighter-rouge">ng build --prod</code></li>
+      <li>Now angular would have created/updated the <code class="highlighter-rouge">dist</code> folder in root with updated compiled files</li>
+      <li>You need to copy all the files in <code class="highlighter-rouge">dist</code> folder to you Laravel’s <code class="highlighter-rouge">public/admin</code> folder.</li>
+      <li>For example <code class="highlighter-rouge">cp -r cookfu-angular/dist/* cookfu/public/admin/</code> assuming <code class="highlighter-rouge">cookfu-angular</code> is your angular project folder and <code class="highlighter-rouge">cookfu</code> is your laravel project folder</li>
+    </ul>
   </li>
 </ol>
 
@@ -444,7 +463,7 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2019 Opus Labs. All rights reserved. <br />
- Site last generated: Feb 4, 2019 <br />
+ Site last generated: Apr 13, 2019 <br />
 <p><img src="images/company_logo_dark.png" alt="Company logo"/></p>
                 </div>
             </div>
