@@ -4,9 +4,10 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="These instructions will help you in setup server and mobile application.">
+<meta name="description" content="Technical information to help you setup server and mobile application of Cookfu - Food Delivery App.">
 <meta name="keywords" content=" ">
-<title>Cookfu Ionic Documentation | Cookfu Ionic Documentation</title>
+<title>Cookfu Installation Documentation | Cookfu Ionic Documentation</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,6 +19,7 @@
 <link rel="stylesheet" href="css/boxshadowproperties.css">
 <!-- most color styles are extracted out to here -->
 <link rel="stylesheet" href="css/theme-blue.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -42,6 +44,394 @@
 <![endif]-->
 
 <link rel="alternate" type="application/rss+xml" title="documentation-cookfu" href="opuslabsin.github.io/feed.xml">
+
+<style type="text/css">
+    body {
+        font-family: 'Montserrat', sans-serif;
+        /*font-family: 'Open Sans', sans-serif;*/
+        font-size: 18px;
+    }    
+	.home {
+    	width: 100%;
+        height: 700px;
+        background: -moz-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+        background: -webkit-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+        background: linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+    }
+    .jumbo {
+    	border-radius: initial;
+        margin-bottom: auto;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 260px;
+        right: 0;
+    }
+    #home-title {
+        font-size: 2.9em;
+        text-align: center;
+        color: #fff;
+        font-family: times, arial !important;
+        font-weight: 600;
+    }
+
+    #home-title-txt {
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+        font-family: open-sans, Tahoma, Verdana, sans-serif !important;
+    }
+
+    #scroll-down {
+        position: absolute;
+        left: 50%;
+        top: 300%;
+        z-index: 1;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 700px;
+      background-color: transparent;  
+    }
+
+    .post-content {
+    	padding-top: 100px;
+    }
+
+    div#toc >ul::before {
+    	font-size: 24px;
+    }
+
+    .down-scroll a {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        z-index: 2;
+        display: inline-block;
+        -webkit-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+        color: #fff;
+        font: 400 20px / 1 'Josefin Sans', sans-serif;
+        letter-spacing: .1em;
+        text-decoration: none;
+        transition: opacity .3s;
+        transition-duration: .5s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+
+    #scroll-down a span
+    {
+    	position: absolute;
+    	top: 0;
+    	left: 50%;
+    	width: 45px;
+    	height: 45px;
+    	margin-left: -23px;
+    	border: 1px solid #fff;
+    	border-radius: 100%;
+    	box-sizing: border-box;
+    }
+
+    #scroll-down a span::after
+    {
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	content: '';
+    	width: 16px;
+    	height: 16px;
+    	margin: -12px 0 0 -8px;
+    	border-left: 1px solid #fff;
+    	border-bottom: 1px solid #fff;
+    	-webkit-transform: rotate(-45deg);
+    	transform: rotate(-45deg);
+    	box-sizing: border-box;
+    }
+
+    #scroll-down a span::before
+    {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	z-index: -1;
+    	content: '';
+    	width: 44px;
+    	height: 44px;
+    	box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+    	border-radius: 100%;
+    	opacity: 0;
+    	-webkit-animation: 3s infinite sdb03;
+    	animation: 3s infinite sdb03;
+    	box-sizing: border-box;
+    }
+
+    .down-scroll a:hover
+    {
+    	transition: all 1s ease;
+    	-webkit-transition: 1s ease-out;
+    	-moz-transition: 1s ease-out;
+    	-o-transition: 1s ease-out;
+    	opacity: .5;
+    	transition: all 1s ease;
+    	bottom: 1%;
+    	color: #fff;
+    	-webkit-transition: 1s ease-out;
+    	-moz-transition: 1s ease-out;
+    	-o-transition: 1s ease-out;
+    	opacity: .5;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .nav div.logo {
+        float: left;
+        width: auto;
+        height: auto;
+        padding-left: 3rem;
+    }
+
+    .nav {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        line-height: 40px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease;
+        z-index: 9999 !important;
+    }
+
+    footer {
+        color: #fff;
+        background-color: #2171B6;
+        padding-top: 137px;
+        padding-bottom: 40px;    
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 0;
+    }
+
+    .oval-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 232px;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .bg-oval {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        min-width: 2424px;
+        height: 866px;
+    }
+    .bg-oval img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #footer-cta {
+        overflow: visible;
+        text-align: center;
+        padding-top: 438px;
+        padding-bottom: 19px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #footer-cta .bg-wrap {
+        height: 460px;
+    }
+    .bg-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #footer-cta .background {
+        width: 605px;
+        margin-left: -302px;
+    }
+    .background.cn {
+        left: 50%;
+        width: 1800px;
+        margin-left: -900px;
+    }
+    .basic-scaler {
+        transform-origin: center top;
+    }
+    .background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    #footer-cta.on .blob {
+        -webkit-animation: floatY infinite 10s ease-in-out;
+        -moz-animation: floatY infinite 10s ease-in-out;
+        animation: floatY infinite 10s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+    #footer-cta .blob[data-num="1"] {
+        width: 150px;
+        left: 50px;
+        top: 242px;
+    }
+    .part {
+        position: absolute;
+        left: 40px;
+        top: 0;
+    }
+    #footer-cta .background .main {
+        width: 505px;
+    }
+
+    .part img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #footer-cta.on .blob[data-num="2"] {
+        animation-delay: -5s;
+    }
+    #footer-cta.on .blob {
+        -webkit-animation: floatY infinite 10s ease-in-out;
+        -moz-animation: floatY infinite 10s ease-in-out;
+        animation: floatY infinite 10s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+    #footer-cta .blob[data-num="2"] {
+        width: 130px;
+        left: 410px;
+        top: 65px;
+    }
+
+    #footer-cta.on .blob[data-num="2"] img {
+        animation-delay: -4s;
+    }
+    #footer-cta.on .blob img {
+        -webkit-animation: aboutWheelSpin infinite 15s linear;
+        -moz-animation: aboutWheelSpin infinite 15s linear;
+        animation: aboutWheelSpin infinite 15s linear;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+
+    #footer-cta .man {
+        width: 140px;
+        left: 355px;
+        top: 120px;
+    }
+
+    .documentation {
+        padding-bottom: 100px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .section-col {
+        /*margin-top: 150px;*/
+    }
+
+    .section-title, #introduction {
+        font-size: 33px;
+        line-height: 1.55;    
+        margin-bottom: 20px;
+        color: #2171B6;
+        font-family: times, arial;
+    }
+
+    .letter {
+      display: inline-block;
+      line-height: 1em;
+    }
+
+    .seperator {
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: 992px) {
+        .section-col {
+            margin-top: 80px;
+        }
+    }
+
+    @-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+    @keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+    @keyframes floatY {
+      0% {
+        transform: translateY(-20px);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+    .float-y {
+      -webkit-animation: floatY infinite 10s ease-in-out;
+      -moz-animation: floatY infinite 10s ease-in-out;
+      animation: floatY infinite 10s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes aboutWheelSpin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .about-wheelspin {
+      -webkit-animation: aboutWheelSpin infinite 15s linear;
+      -moz-animation: aboutWheelSpin infinite 15s linear;
+      animation: aboutWheelSpin infinite 15s linear;
+      animation-fill-mode: forwards;
+    }
+
+</style>
 
     <script>
         $(document).ready(function() {
@@ -95,89 +485,44 @@
 
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-static-top" style="min-height:75px;">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img style="height:50px;" src="images/company_logo.png" alt="Company logo"/></a>
+    <nav class="nav">
+        <div class="container-fluid">
+            <div class="logo"><a href="#"><img src="images/company_logo.png" alt=""></a>
+            </div>            
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right" style="margin-top:12px;">
-                <!-- toggle sidebar button -->
-                <!--<li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>-->
-                <!-- entries without drop-downs appear here -->
+    </nav>
+    <!-- Page Content -->
+    <section class="home">
+        <div class="area">
+            <div id="particles-js"></div>
+            <div class="jumbo">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p id="home-title"><span class="letter">Cookfu Installation Documentation</span></p>
+                            <p id="home-title-txt">Technical information to help you setup server and mobile application of Cookfu - Food Delivery App.</p>
+                        </div>                        
+                        <section id="scroll-down" class="down-scroll"><a href="#introduction"><span class="mx-auto"></span></a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container documentation">
+          <div id="main">
 
-
-
-
+            <!-- Content Row -->
+            <div class="row">
                 
                 
-                
-                <li><a href="https://opuslabs.freshdesk.com/" target="_blank">Support</a></li>
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
-            </ul>
-        </div>
-        </div>
-        <!-- /.container -->
-</nav>
 
-<!-- Page Content -->
-<div class="container">
-  <div id="main">
-
-    <!-- Content Row -->
-    <div class="row">
-        
-        
-
-        <!-- Content Column -->
-        <div class="col-md-12" id="tg-sb-content">
-            <div class="post-header">
-   <h1 class="post-title-main">Cookfu Ionic Documentation</h1>
-</div>
-
-
+                <!-- Content Column -->
+                <div class="col-md-12" id="tg-sb-content">
+                    
 
 <div class="post-content">
 
    
-    <div class="summary">These instructions will help you in setup server and mobile application.</div>
-   
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
 
     
 
@@ -187,265 +532,371 @@ $('#toc').on('click', 'a', function() {
 
     
 
+  <div>
   <h1 id="introduction">Introduction</h1>
-<p>The app is connected with Laravel 5.5 based CMS using REST APIs, the following documentation will guide you through the process to connect the app with your backend.
-This guide assumes you have some experience in setting up PHP based web applications and <a href="https://laravel.com/docs/5.5/">Laravel Framework 5.5</a>.</p>
+  <p>The app is connected with Laravel 6 based CMS using REST APIs, the following documentation will guide you through the process to connect the app with your backend.
+This guide assumes you have some experience in setting up PHP based web applications and <a href="https://laravel.com/docs/6.0/">Laravel Framework 6</a>. Our mobile app supports Android platform, please ensure you have Android setup on your machine before following this tutorial, if you are new, please follow <a href="https://developer.android.com/">Android Developer Guide</a>.</p>
 
-<h1 id="setting-up-the-server">Setting up the server</h1>
-<ol>
-  <li>
-    <h3 id="server-requirement">Server Requirement</h3>
+  <p>Before you begin please ensure you have all of the dependenices to succesfully build and deploy this project. You will need:</p>
 
-    <p>The server on which you are going to deploy the backend must fulfill the following requirements:</p>
-    <ul>
-      <li>PHP &gt;= 7.2</li>
-      <li>Mysql 5.7</li>
-      <li>OpenSSL PHP Extension</li>
-      <li>PDO PHP Extension</li>
-      <li>Mbstring PHP Extension</li>
-      <li>Tokenizer PHP Extension</li>
-      <li>XML PHP Extension</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="deploying-backend">Deploying Backend</h3>
-    <p>Follow these steps:</p>
-    <ul>
-      <li>Extract the <code class="highlighter-rouge">cookfu.zip</code> on your server</li>
-      <li>For example if your domain is http://cookfu.com then you will be able to access the backend as http://cookfu.com/cookfu/public</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="configuration">Configuration</h3>
-    <p>All the major configuration values you will need to set in .env file which is present in root folder of the accompanied source code. Following are the most important values, you may set other values in .env as well if you have experience and requirment to do so:</p>
-  </li>
-</ol>
+  <ol>
+    <li>Server with Php version 7.2 or above and Mysql 5.7 and above database</li>
+    <li>
+      <p>System running following versions</p>
 
-<ul>
-  <li><strong>App related</strong>:
-    <ul>
-      <li>APP_NAME: Title of your app</li>
-      <li>APP_URL: Url of your backend</li>
-    </ul>
-  </li>
-  <li><strong>Database related</strong>:
-    <ul>
-      <li>DB_HOST: Database host, usually it’s localhost</li>
-      <li>DB_PORT: Database port, incase of mysql it’s usually 3306</li>
-      <li>DB_DATABASE: Database Name</li>
-      <li>DB_USERNAME: Database username</li>
-      <li>DB_PASSWORD: Database password</li>
-    </ul>
-  </li>
-  <li><strong>Push Notification related</strong>:
-    <ul>
-      <li>FCM_SERVER_KEY</li>
-      <li>FCM_SENDER_ID</li>
-    </ul>
-  </li>
-  <li><strong>Email Related</strong>:
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Node.js version 8.9.3
+   Ionic 3.9.2
+   Cordova 9
+   Java 8 for Android
+</code></pre></div>      </div>
+    </li>
+    <li>Firebase account with billing enabled</li>
+    <li>OneSignal account</li>
+  </ol>
+</div>
+
+<!-- <div class="row">
+  <div class="col-md-12"><img src="images/architecture.png" /></div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-6 section-col">
+    <h2 id="server-title" class="section-title">Instructions for setting up server</h2>
+    <p>Following section explains how to setup our Laravel based code on server and configure it properly</p>
+  </div>
+  <div class="col-md-6">
+    <section id="footer-cta" class="hasAnim on" data-offset="100">
+      <div class="bg-wrap">
+        <div class="background cn basic-scaler">
+          <!-- animations -->
+
+          <div class="blob part" data-num="1"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob1.svg" /></div>
+
+          <div class="part main"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-cta.svg" /></div>      
+
+          <div class="part main"><img src="images/footer-girl-server@2x.png" /></div>
+
+          <div class="blob part" data-num="2"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob2.svg" /></div>          
+
+          <!-- end animations -->
+        </div>
+      </div>    
+    </section>
+  </div>  
+</div>
+
+<div>
+  <ol>
+    <li>
+      <h3 id="server-requirement">Server Requirement</h3>
+
+      <p>The server on which you are going to deploy the backend must fulfill the following requirements:</p>
+      <ul>
+        <li>PHP &gt;= 7.2.0</li>
+        <li>Mysql 5.7</li>
+        <li>BCMath PHP Extension</li>
+        <li>Ctype PHP Extension</li>
+        <li>JSON PHP Extension</li>
+        <li>OpenSSL PHP Extension</li>
+        <li>PDO PHP Extension</li>
+        <li>Mbstring PHP Extension</li>
+        <li>Tokenizer PHP Extension</li>
+        <li>XML PHP Extension</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="deploying-backend">Deploying Backend</h3>
+      <p>Follow these steps:</p>
+      <ul>
+        <li>Extract the <code class="highlighter-rouge">cookfu.zip</code> on your server</li>
+        <li>For example if your domain is <code class="highlighter-rouge">http://cookfu.com</code> then you will be able to access the backend as <code class="highlighter-rouge">http://cookfu.com/cookfu/public</code></li>
+        <li>Use our simple Installation Wizard to setup your server by visiting <code class="highlighter-rouge">/installer</code></li>
+        <li>For example, <code class="highlighter-rouge">http://cookfu.com/cookfu/public/installer</code></li>
+        <li>Fill up the form and your server will be configured now</li>
+        <li>After you hit the install button, you will also get the url of admin panel</li>
+        <li>If you want to make any customization or have any specific requirement, please follow below points, otherwise you can now skip to Mobile App section below</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="configuration">Configuration</h3>
+      <p>All the major configuration values you will need to set in <code class="highlighter-rouge">.env</code> file which is present in root folder of the accompanied source code. This file must be writable by webserver’s user. Following are the most important values, you may set other values in .env as well if you have experience and requirment to do so:</p>
+      <ul>
+        <li><strong>App related -  Very Important</strong>:
+          <ul>
+            <li><code class="highlighter-rouge">APP_NAME</code>: Title of your app</li>
+            <li><code class="highlighter-rouge">APP_URL</code>: Url of your backend</li>
+            <li><code class="highlighter-rouge">APP_DEBUG</code>: Set it to false in production environment</li>
+          </ul>
+        </li>
+        <li><strong>Database related -  Very Important</strong>:
+          <ul>
+            <li><code class="highlighter-rouge">DB_HOST</code>: Database host, usually it’s localhost</li>
+            <li><code class="highlighter-rouge">DB_PORT</code>: Database port, incase of mysql it’s usually 3306</li>
+            <li><code class="highlighter-rouge">DB_DATABASE</code>: Database Name</li>
+            <li><code class="highlighter-rouge">DB_USERNAME</code>: Database username</li>
+            <li><code class="highlighter-rouge">DB_PASSWORD</code>: Database password</li>
+          </ul>
+        </li>
+        <li><strong>Email Related</strong>:
 Email integration is provided with Mailgun, Amazon SES, SMTP. For more details refer to <a href="https://laravel.com/docs/5.5/mail">https://laravel.com/docs/5.5/mail</a>.
 If you are integrating with mailgun, you can simply set following values in .env
-    <ul>
-      <li>MAILGUN_DOMAIN</li>
-      <li>MAILGUN_SECRET</li>
-    </ul>
+          <ul>
+            <li><code class="highlighter-rouge">MAILGUN_DOMAIN</code></li>
+            <li><code class="highlighter-rouge">MAILGUN_SECRET</code></li>
+          </ul>
 
-    <p>If you need more configuration or advance setting, you can look for keys starting with MAIL_ in .env</p>
-  </li>
-  <li><strong>Logo</strong>:
-    <ul>
-      <li>APP_LOGO: Enter the url of your logo, this logo will be displayed in backend panel</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Admin Notifications</strong>:</p>
+          <p>Also make sure to update following keys with valid values:</p>
+          <ul>
+            <li><code class="highlighter-rouge">MAIL_FROM_ADDRESS</code></li>
+            <li><code class="highlighter-rouge">MAIL_FROM_NAME</code></li>
+          </ul>
 
-    <p>If you need to receive notification in admin panel for New Registerations, New Order etc you will need to following steps:
-Set following values in .env:</p>
-    <ul>
-      <li>PUSHER_APP_ID - Refer to <a href="https://pusher.com/">https://pusher.com/</a></li>
-      <li>PUSHER_APP_KEY - Refer to <a href="https://pusher.com/">https://pusher.com/</a></li>
-      <li>PUSHER_APP_SECRET - Refer to <a href="https://pusher.com/">https://pusher.com/</a></li>
-      <li>ADMIN_NOTIFICATIONS - Set to <code class="highlighter-rouge">true</code></li>
-      <li>ADMIN_NOTIFICATION_CHANNELS - Set to <code class="highlighter-rouge">mail,database</code></li>
-      <li>USE_QUEUE_FOR_EVENTS - Set to <code class="highlighter-rouge">false</code>, if you are hosting backend on VPS you may set this to <code class="highlighter-rouge">true</code>. Incase you set it to true you will need to enable you will have to cron job as well</li>
-    </ul>
-  </li>
-  <li><strong>Google Maps</strong>:
-    <ul>
-      <li>FIREBASE_API_KEY: Make sure you have enabled <code class="highlighter-rouge">Maps Javascript API</code> and <code class="highlighter-rouge">Billing</code> in your <a href="https://console.cloud.google.com">https://console.cloud.google.com</a> account as well.</li>
-    </ul>
-  </li>
-</ul>
+          <p>If you need more configuration or advance setting, you can look for keys starting with MAIL_ in .env</p>
+        </li>
+        <li><strong>Push Notification</strong>:
+For push notification our system uses OneSignal. Create an account on OneSignal <a href="http://onesignal.com/">here</a>.
+          <ul>
+            <li>Step 1: Create new OneSignal Account</li>
+            <li>Step 2: Create three new apps in OneSignal. One for customer app, one for store app and one for driver app</li>
+            <li>Step 3: Update the following keys in .env file of our project</li>
+            <li><code class="highlighter-rouge">ONESIGNAL_APP_ID_CUSTOMER</code></li>
+            <li><code class="highlighter-rouge">ONESIGNAL_REST_API_CUSTOMER</code></li>
+            <li><code class="highlighter-rouge">ONESIGNAL_APP_ID_STORE</code></li>
+            <li><code class="highlighter-rouge">ONESIGNAL_REST_API_STORE</code></li>
+            <li><code class="highlighter-rouge">ONESIGNAL_APP_ID_DRIVER</code></li>
+            <li><code class="highlighter-rouge">ONESIGNAL_REST_API_DRIVER</code></li>
+          </ul>
+        </li>
+        <li>
+          <p><strong>Payment gateway</strong>:
+Our system comes integerated with 3 major payment gateways out of the box i.e. Stripe, Paypal and Payu. While Paypal and Payu are configured client side, you will need to update your .env file for Stripe Integeration. Since all of these payment gateways are for Credit/Debit card payment we suggest to use one of them only. Enabling all or any of two them is not tested.</p>
 
-<ol>
-  <li>
-    <h3 id="database">Database</h3>
-    <p>In accompanied source code you will find a sql file named chefqu_master.sql. Create the database and then import the file in your database.</p>
-  </li>
-  <li>
-    <h3 id="admin-panel">Admin Panel</h3>
-    <p>Admin panel is developed in Angular 7 and shipped in seperate folder. Normally you will not need to compile the files again for your deployment. If you are not going to make any change in Admin Panel source code, you can skip the angular compiling step.
-  Following change in the file will still be required in any case:</p>
-    <ul>
-      <li>Open <code class="highlighter-rouge">public/admin/main.main.33d7d7e4287b585cb872.js.js</code> or if you do not see this specific file open <code class="highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
-      <li>Update Base Url - Search for <code class="highlighter-rouge">http://opuslabs.in:9081/api/admin</code> and replace it with your backend url for example <code class="highlighter-rouge">http://cookfu.com/cookfu/public/api/admin</code></li>
-      <li>Update Project Title - Search for <code class="highlighter-rouge">Cookfu</code> and replace it with your project title</li>
-      <li>Update Google Maps Key - Locate <code class="highlighter-rouge">GOOGLE_MAPS_API_KEY</code> variable in file and replace it’s value with your Google Maps Api Key</li>
-      <li>This is a just a quicker way to make ready your admin panel so that you do not have to compile whole angular project, if you want to customize source as per your requiremtn you will need to follow steps mentione below. If you do not want customization you can stop at these step.</li>
-      <li>Open <code class="highlighter-rouge">cookfu-admin.zip</code>, it’s an Angualr 7 based project</li>
-      <li>If you are not familiar with Angular 7 we will suggest you to get basic idea from <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></li>
-      <li>If you need to change api url, open <code class="highlighter-rouge">src/app/@core/models/constants.model.ts</code> and update the value of <code class="highlighter-rouge">API_BASE_URL</code>  variable</li>
-      <li>After making the required changes issue a command <code class="highlighter-rouge">ng build --prod</code></li>
-      <li>Now angular would have created/updated the <code class="highlighter-rouge">dist</code> folder in root with updated compiled files</li>
-      <li>You need to copy all the files in <code class="highlighter-rouge">dist</code> folder to you Laravel’s <code class="highlighter-rouge">public/admin</code> folder.</li>
-      <li>For example <code class="highlighter-rouge">cp -r cookfu-angular/dist/* cookfu/public/admin/</code> assuming <code class="highlighter-rouge">cookfu-angular</code> is your angular project folder and <code class="highlighter-rouge">cookfu</code> is your laravel project folder</li>
-    </ul>
-  </li>
-</ol>
+          <p><strong>Stripe</strong>:</p>
+          <ul>
+            <li><code class="highlighter-rouge">STRIPE_KEY</code></li>
+            <li><code class="highlighter-rouge">STRIPE_SECRET</code></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="database">Database</h3>
+      <p>In accompanied source code you will find a sql file named <code class="highlighter-rouge">cookfu.sql</code>. Create the database and then import the file in your database.</p>
+    </li>
+    <li>
+      <h3 id="image-upload">Image upload</h3>
+      <p>Make sure <code class="highlighter-rouge">public/storage</code> is writable by webserver user. In general giving 777 permission to <code class="highlighter-rouge">public/storage</code> is sufficient.</p>
+    </li>
+    <li>
+      <h3 id="admin-panel">Admin Panel</h3>
+      <ul>
+        <li>Open <code class="highlighter-rouge">public/admin/assets/appConfig.json</code></li>
+        <li>Update value of <code class="highlighter-rouge">appName</code>, <code class="highlighter-rouge">apiBaseUrl</code> and <code class="highlighter-rouge">mapsApiKey</code>(Google Maps API key)</li>
+        <li>Make sure you have enabled <code class="highlighter-rouge">Maps Javascript API</code> and <code class="highlighter-rouge">Billing</code> in your <a href="https://console.cloud.google.com">https://console.cloud.google.com</a> account as well and entered the correct key in <code class="highlighter-rouge">mapsApiKey</code> variable</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="customize-admin-panel">Customize Admin Panel</h3>
+      <p>Admin panel is developed in Angular 7 and shipped in seperate folder. You will need to update app title and base url. If you need to make any changes in admin other than this, follow next steps</p>
+      <ul>
+        <li>Open <code class="highlighter-rouge">cookfu-admin.zip</code>, it’s an Angualr 7 based project, nodejs version 8 is required</li>
+        <li>Run <code class="highlighter-rouge">npm install</code> command</li>
+        <li>If you are not familiar with Angular 7 we will suggest you to get basic idea from <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></li>
+        <li>After making the required changes run a command <code class="highlighter-rouge">ng build --prod</code></li>
+        <li>Now angular would have created/updated the <code class="highlighter-rouge">dist</code> folder in root folder with updated compiled files</li>
+        <li>You need to copy all the files in <code class="highlighter-rouge">dist</code> folder to you Laravel’s <code class="highlighter-rouge">public/admin</code> folder.</li>
+        <li>For example <code class="highlighter-rouge">cp -r cookfu-angular/dist/* cookfu/public/admin/</code> assuming <code class="highlighter-rouge">cookfu-angular</code> is your angular project folder and <code class="highlighter-rouge">cookfu</code> is your laravel project folder</li>
+      </ul>
+    </li>
+  </ol>
+</div>
 
-<h1 id="mobile-app">Mobile App</h1>
-<ol>
-  <li>
-    <h3 id="setup-firebase-and-api-keys">Setup Firebase and Api keys</h3>
-    <ul>
-      <li>Login to http://console.firebase.google.com</li>
-      <li>Click on “Add project” to add new project -&gt; provide project name as you like and hit Create Project.</li>
-      <li>Now you have to Register apps in this project. Click “Add app” -&gt; choose platform Android</li>
-      <li>Each app has its unique ID known as “Package name” or “ApplicationId”. For more info on how to name one visit https://developer.android.com/studio/build/application-id</li>
-      <li>Enter package name as asked on firebase console(once for User’s app, Restaurant’s app and Driver’s app. ps-sequence doesnt matter).</li>
-      <li>Set a nickname(optional, but we’ll add total of three apps so..)</li>
-      <li>Enter your app signing certificate(Optional but important in order to make features work like social login and otp verification. here is how to have one -&gt; https://developers.google.com/android/guides/client-auth)</li>
-      <li>Click Register app. Upon succesful registration of app you’ll be provided with your configuration file(google-services.json) for that app.</li>
-      <li>Next click continue or skip to proceed and Repeat this step 2 more times to register app for Restaurant’s application and Driver’s application</li>
-      <li>Upon registering 3 applications in your firebase project you should have 3 applicationIds and 3 configuration files(google-services.json).</li>
-      <li>Now for api keys visit https://console.cloud.google.com/cloud-resource-manager</li>
-      <li>Select the project you just created in firebase</li>
-      <li>Navigate to “Api and Services” section and click “ENABLE APIS AND SERVICES”</li>
-      <li>Now Search and Enable 3 apis -&gt; maps sdk for android, places sdk for android and directions api.</li>
-      <li>Go to credentails and copy “Android key” and “Browser key”</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="install-nodejs">Install Node.js</h3>
-    <p>You must have <strong>Node.js</strong> installed on your system to begin building our app. Please follow the following step if nodejs is not installed on your system. If already done, you can skip this step</p>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 seperator">
+    <img src="images/horizontal-line.svg" width="282" height="" />
+  </div>
+</div>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Note: Install Node.js version 8 or above on your system. 
-</code></pre></div>    </div>
+<div class="row">
+  <div class="col-md-6 section-col">
+    <h2 id="mobile-title" class="section-title">Instructions for building mobile app</h2>
+    <p>Following section explains how to connect mobile app to server and build it properly</p>
+  </div>
+  <div class="col-md-6">
+    <section id="footer-cta" class="hasAnim on" data-offset="100">
+      <div class="bg-wrap">
+        <div class="background cn basic-scaler">
+          <!-- animations -->
 
-    <p>Download the Node.js as per your operating system from <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>
-To ensure that you have correct version of nodejs installed, from the command line issue the following command</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node -v
-</code></pre></div>    </div>
-    <p>If you see the string containing version number greater than 8, you are good to go. If you get <code class="highlighter-rouge">command not found error</code>, that means nodejs is not properly installed on your system. You’ll need to troubleshoot the problem.</p>
-    <h6 id="you--may-be-able-to-use-node-version-lessser-than-8-but-we-havent-tested-the-app-with-these-versions"><strong>You  may be able to use node version lessser than 8 but we haven’t tested the app with these versions</strong></h6>
-  </li>
-  <li>
-    <h3 id="install-ionic-and-cordova">Install ionic and cordova</h3>
-    <p>In order to build our app you need to have installed ionic and cordova on your system. To install these packages issue the following command from command line:</p>
+          <div class="blob part" data-num="1"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob1.svg" /></div>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm install -g ionic@3.9.2 cordova
-</code></pre></div>    </div>
+          <div class="part main"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-cta.svg" /></div>      
 
-    <p>This will install the ionic and cordova programs on your system. To ensure that you have successfully installed both the programs, issue following command from the command line</p>
+          <div class="part main"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-girl@2x.png" /></div>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ionic -v &amp;&amp; cordova -v
-</code></pre></div>    </div>
+          <div class="blob part" data-num="2"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob2.svg" /></div>
+          <div class="man part"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-man@2x.png" /></div>
 
-    <p>If version number gets printed on the console, you are good to go. If you get <code class="highlighter-rouge">command not found error</code>, that means that these programs didn’t get properly installed on your system. You’ll need to troubleshoot the problem.</p>
+          <!-- end animations -->
+        </div>
+      </div>    
+    </section>
+  </div>  
+</div>
+<div>
+  <ol>
+    <li>
+      <h3 id="setup-firebase">Setup Firebase</h3>
+      <ul>
+        <li>Login to <a href="http://console.firebase.google.com">http://console.firebase.google.com</a></li>
+        <li>Click on <code class="highlighter-rouge">Add project</code> to add new project.</li>
+        <li>Enter the name of your project and click on <code class="highlighter-rouge">Create Project</code></li>
+        <li>Now you have to Register apps in this project.</li>
+        <li>Click <code class="highlighter-rouge">Add app</code></li>
+        <li>Choose platform <code class="highlighter-rouge">android</code> for Android apps and <code class="highlighter-rouge">ios</code> for iOS Apps</li>
+        <li>Each app has its unique ID known as “Package name” or “ApplicationId”. For more info on how to name one visit <a href="https://developer.android.com/studio/build/application-id">https://developer.android.com/studio/build/application-id</a></li>
+        <li>Enter <code class="highlighter-rouge">Android Package Name</code> in case of Android and <code class="highlighter-rouge">iOS bundle id</code> in case of iOS. In both platforms this is your apps’s packge name.</li>
+        <li>Enter a App Nickname</li>
+        <li>Enter your app signing certificate(Optional but important in order to make features work like social login and otp verification. here is how to have one -&gt; https://developers.google.com/android/guides/client-auth)</li>
+        <li>Click <code class="highlighter-rouge">Register</code> app.</li>
+        <li>Upon succesful registration of app you’ll be provided with your configuration file</li>
+        <li>In case of Android this will be named <code class="highlighter-rouge">google-services.json</code> and in case of iOS this will be named <code class="highlighter-rouge">GoogleService-Info.plist</code></li>
+        <li><code class="highlighter-rouge">SHA-1</code> keys - In case of Android enter your debug or release SHA-1 key depending on your build type(debug or release). Refer <a href="https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate">https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate</a> for help.</li>
+        <li>Next click continue or skip to proceed and Repeat this step 2 more times to register app for Restaurant’s application and Driver’s application</li>
+        <li>Upon registering 3 applications in your firebase project you should have 3 applicationIds and 3 configuration files(google-services.json).</li>
+        <li><code class="highlighter-rouge">Phone Authentication</code> - Enable <code class="highlighter-rouge">Phone</code> auth from Authentication in side menu.</li>
+        <li><code class="highlighter-rouge">Database</code> - Enable <code class="highlighter-rouge">Realtime Database</code> in Test Mode from Database in side menu. We recommend that you enter some random value in here so that it doesn’t reset.</li>
+        <li>
+          <p><code class="highlighter-rouge">Storage</code> - Enable Storage from from side menu. When asked for databse rules enter following.</p>
 
-    <p><strong>Make sure you do not accidentally install ionic-v4(beta)</strong></p>
-  </li>
-  <li>
-    <h3 id="seting-up-ionic-application">Seting up Ionic application</h3>
-    <p>Add configuration files(google-services.json) aquired from step 1 into respective project’s root folder.
- You’ll find config.xml, open to edit “id” parameter in very first line with applicationId you creted in step 1 in firebase console.
- Specify application’s name between tag name <name>here</name>.
- Next file -&gt; src/app/app.config.ts
- Here change appName(name that displayes inside application)
- change apiBase with your base url.. such as -&gt; http://yourbaseurl.com/api/
- change googleApiKey with the Browser key obtained in step 1.</p>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write;
+    }
+  }
+}
+</code></pre></div>          </div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="google-api-keys">Google API keys</h3>
+      <ul>
+        <li>Visit <a href="https://console.cloud.google.com/cloud-resource-manager">https://console.cloud.google.com/cloud-resource-manager</a></li>
+        <li>Select the project you just created in firebase</li>
+        <li>Navigate to “Api and Services” section and click “ENABLE APIS AND SERVICES”</li>
+        <li>Enable <code class="highlighter-rouge">Maps Javascript API</code> - Before you start using the Maps JavaScript API, you need a project with a billing account and the Maps JavaScript API enabled. To learn more, see <a href="https://developers.google.com/maps/gmp-get-started">Get Started with Google Maps Platform</a>.</li>
+        <li>Enable <code class="highlighter-rouge">Places API</code></li>
+        <li>Enable <code class="highlighter-rouge">Geocoding API</code></li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="downloadsetup-nodejs-and-ionic">Download/Setup NodeJs and Ionic</h3>
+      <ul>
+        <li>
+          <p>Following softwares must be installed on your system before you start building your app.</p>
 
-    <p><strong><code class="highlighter-rouge">cordova-plugin-googleplus</code></strong></p>
-    <ul>
-      <li>
-        <p>Run the following command to add the support for google login</p>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Node.js version 8.9.3
+  Ionic 3.9.2
+  Cordova 9
+</code></pre></div>          </div>
+        </li>
+        <li>Having exact version is neccesary to succesfully building the app. If you are having any trouble in build, please ensure you have the same versions installed as mentioned above</li>
+        <li>To install Node.js version 8.9.3 on your system <a href="https://nodejs.org/en/blog/release/v8.9.3/">https://nodejs.org/en/blog/release/v8.9.3/</a>. Verify installattion by running <code class="highlighter-rouge">node -v</code> you should see version 8.9.3 output.</li>
+        <li>To install <code class="highlighter-rouge">ionic@3.9.2</code> run <code class="highlighter-rouge">npm install -g ionic@3.9.2</code></li>
+        <li>To install <code class="highlighter-rouge">cordova@9.0.0</code> run <code class="highlighter-rouge">npm install -g cordova@9.0.0</code></li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="configure-application">Configure Application</h3>
+      <ul>
+        <li>Add <code class="highlighter-rouge">google-services.json</code> aquired from Step 1 into respective project’s app folder.</li>
+        <li>Before starting to build your app you need to edit <code class="highlighter-rouge">config.xml</code> and <code class="highlighter-rouge">src/app/app.config.ts</code> files</li>
+        <li>
+          <p>In <code class="highlighter-rouge">config.xml</code> make following changes:</p>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; ionic cordova plugin add cordova-plugin-googleplus --save --variable WEB_APPLICATION_CLIENT_ID=mywebapplicationclientid
-&gt; npm install --save @ionic-native/google-plus
-</code></pre></div>        </div>
+          <ul>
+            <li>Application’s package name/application id in id parameter in line no. 2</li>
+            <li>Application name in line number 3</li>
+          </ul>
+        </li>
+        <li>
+          <p><code class="highlighter-rouge">app.config.ts</code> includes all other necessary configuration. Let’s look at each of them.</p>
 
-        <p>Your <strong>mywebapplicationclientid</strong> will look something like this <strong>511052243603-tti40jbrr3ukb2t3abebcesl5sd0ql099.apps.googleusercontent.com</strong>. We have already demonstrated above how to get this id.</p>
-      </li>
-    </ul>
+          <ul>
+            <li><code class="highlighter-rouge">appName</code> - Name of your application, this one is used to display app’s name inside the app.</li>
+            <li><code class="highlighter-rouge">apiBase</code> - Enter your api base url. For example <code class="highlighter-rouge">https://cookfu.com/cookfu/public/</code></li>
+            <li><code class="highlighter-rouge">googleApiKey</code> This is used for google maps services. In firebase console go to  Project -&gt; Project Overview -&gt; Project Setting -&gt; General and copy <code class="highlighter-rouge">Web API Key</code> and paste in here.</li>
+            <li><code class="highlighter-rouge">oneSignalAppId</code> - Register your apps here <a href="https://app.onesignal.com/">https://app.onesignal.com/</a> (3 - user’s, store’s and delivery guy’s application). Get respective OneSignal app ID’s to copy in here.</li>
+            <li><code class="highlighter-rouge">oneSignalGPSenderId</code> - In firebase console go to  Project -&gt; Project Overview -&gt; Project Setting -&gt; Cloud Messaging tab and copy <code class="highlighter-rouge">Sender ID</code> and paste in here.</li>
+            <li><code class="highlighter-rouge">firebaseConfig</code> Used for firebase realtime database and phone authentication. See this for setup instructions <a href="https://firebase.google.com/docs/web/setup#config-object">https://firebase.google.com/docs/web/setup#config-object</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="configure-payment-gateways">Configure Payment Gateways</h3>
+      <ul>
+        <li>Configure <code class="highlighter-rouge">paymentGateways</code> array in <code class="highlighter-rouge">src/app/app.config.ts</code></li>
+        <li>For <code class="highlighter-rouge">Stripe</code> - you only need to setup your <code class="highlighter-rouge">publishable_key</code>’s value obtained from stripe dashboard <a href="https://dashboard.stripe.com/apikeys">https://dashboard.stripe.com/apikeys</a></li>
+        <li>For <code class="highlighter-rouge">PayU Money</code> - Fill in your <code class="highlighter-rouge">payu_key</code> and <code class="highlighter-rouge">payu_salt</code> obtained from registering here <a href="https://onboarding.payu.in/app/account/">https://onboarding.payu.in/app/account/</a></li>
+        <li>For <code class="highlighter-rouge">PayPal</code> - Fill in your sandbox key in <code class="highlighter-rouge">paypal_sandbox</code> or if going live then fill in your produciton key in <code class="highlighter-rouge">paypal_production</code> <a href="https://developer.paypal.com/developer/applications/">https://developer.paypal.com/developer/applications/</a> . Next <code class="highlighter-rouge">paypal_currency</code> is a mandatory ISO 4217 value, find your currency value from <a href="https://en.wikipedia.org/wiki/ISO_4217">https://en.wikipedia.org/wiki/ISO_4217</a>. <code class="highlighter-rouge">note: </code> if <code class="highlighter-rouge">paypal_production</code> is mentioned then <code class="highlighter-rouge">PayPalEnvironmentProduction</code> environment will be used intead of <code class="highlighter-rouge">PayPalEnvironmentSandbox</code>.</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="running-project">Running Project</h3>
 
-    <p><strong><code class="highlighter-rouge">Final Checklist</code></strong></p>
+      <p>Once you have configured your application, you can run and test in browser by following these steps:</p>
+      <ul>
+        <li>Open your desired terminal and navigate to the source folder.</li>
+        <li>Run <code class="highlighter-rouge">npm install</code> to install project dependencies.</li>
+        <li>Run <code class="highlighter-rouge">ionic serve</code> to run your project in browser.</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="android-builds">Android Builds</h3>
+      <ul>
+        <li>Download and install Java here: <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></li>
+        <li>Android SDK setup. We recommend installing <code class="highlighter-rouge">Android Studio</code> for easy setup. <a href="https://developer.android.com/studio/">https://developer.android.com/studio/</a></li>
+        <li>To build debuggable .apk file run <code class="highlighter-rouge">ionic cordova build android --prod</code></li>
+        <li>To build release unsigned .apk file run <code class="highlighter-rouge">ionic cordova build android --prod --release</code></li>
+        <li>To sign builds and publishing refer this. <a href="https://ionicframework.com/docs/v1/guide/publishing.html">https://ionicframework.com/docs/v1/guide/publishing.html</a></li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="deploy-app">Deploy App</h3>
+      <p>Deploying apps on Google Play Store and Apple App Store is out of the scope of this document.
+ Kindly refer to this <a href="https://ionicframework.com/docs/intro/deploying/">guide</a> for further instructions.</p>
+    </li>
+  </ol>
 
-    <p>In summary, make sure you have followed all these steps before proceeding</p>
-    <ul>
-      <li>Added project in firebase</li>
-      <li>Added debug and release <strong>SHA-1 key</strong> in firebase</li>
-      <li>Downloaded <strong>google-services.json</strong> file from firebase and placed it in root folder of the app source code</li>
-      <li>Enabled <strong>Phone Authentication</strong> and <strong>Google</strong> in signin method in firebase</li>
-      <li>Updated all the required values in <strong>app.config.ts</strong></li>
-      <li>
-        <p>Installed <code class="highlighter-rouge">cordova-plugin-googleplus</code> cordova plugins</p>
+</div>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; ionic cordova plugin add cordova-plugin-googleplus --save --variable WEB_APPLICATION_CLIENT_ID=mywebapplicationclientid
+<div class="row">
+  <div class="col-md-12 section-col">
+    <h2 id="mobile-title" class="section-title">Support</h2>
+  </div>
+</div>
+<div>
+  <p>If you are facing any issue while using our project you can reach us to at our Support email. Any other way of communication is not supported.
+Make sure you have followed each and every step mentioned in the doumentation before raising your support request</p>
 
-&gt; npm install --save @ionic-native/google-plus
-</code></pre></div>        </div>
-      </li>
-    </ul>
+  <p>You need to share following information in your support request:</p>
+  <ol>
+    <li>Clear statement about what issue you are facing</li>
+    <li>Screenshots of the problem you are facing. Screenshot must indicate the exact problem you are facing.</li>
+    <li>Console logs from browser’s developer tools indicating error</li>
+    <li>Base url of your project, link to the server where you deployed the backend. Backend support can not be provided for localhost</li>
+    <li>Admin credentials of your backend, if you have changed the default one</li>
+    <li>Access to your server if problem is related to your backend deployment</li>
+    <li><code class="highlighter-rouge">src/app/app.config.ts</code> file from mobile app source code</li>
+    <li><code class="highlighter-rouge">package.json</code> file from mobile app source code</li>
+  </ol>
 
-    <p><strong><code class="highlighter-rouge">Useful links</code></strong></p>
-    <ul>
-      <li>SHA-1 key related
-        <ul>
-          <li><a href="https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app">https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app</a></li>
-          <li><a href="https://developers.google.com/android/guides/client-auth">https://developers.google.com/android/guides/client-auth</a></li>
-          <li><a href="https://medium.com/pen-bold-kiln-press/sha-1-android-studio-ec02fb893e72">https://medium.com/pen-bold-kiln-press/sha-1-android-studio-ec02fb893e72</a></li>
-        </ul>
-      </li>
-      <li>Google login
-        <ul>
-          <li><a href="https://ionicframework.com/docs/native/google-plus/">https://ionicframework.com/docs/native/google-plus/</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="build-app">Build App</h3>
-    <p>Since the app depends on various native capabilities we suggest you to check the app on physical device instead of checking it in browser.
-Once you have followed all the steps given above you can build the app for android and ios. But keep in mind that Ionic doesn’t bundle all of the tooling required to build an app, it relies on some additional SDKs and software provided by Apple and/or Google. You’ll need to set up the platform tooling before you can preview or emulate an application on a simulator or device.</p>
-
-    <p>Once done, you can run following command to run the app on your Android device:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &gt; ionic cordova run android
-</code></pre></div>    </div>
-
-    <p>To build the apk, run:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &gt; ionic cordova build android
-</code></pre></div>    </div>
-
-    <p>Simillarly for iOS, you can run:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &gt; ionic cordova build ios
-</code></pre></div>    </div>
-
-    <p>If you find the given information insufficient for you to successfully build or publish the app on app/play store. Please visit <a href="https://ionicframework.com/docs/intro/deploying/">https://ionicframework.com/docs/intro/deploying/</a> for indepth documentation.</p>
-  </li>
-  <li>
-    <h3 id="deploy-app">Deploy App</h3>
-    <p>Deploying apps on Google Play Store and Apple App Store is out of the scope of this document.
-Kindly refer to this <a href="https://ionicframework.com/docs/intro/deploying/">guide</a> for further instructions.</p>
-  </li>
-</ol>
-
-<p><strong>Note: If you are unable to understand any topic or find any topic needs more elaboration. 
-Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.com">https://opuslabs.freshdesk.com</a></strong></p>
+  <p>If you do not include the above information in your support request, your support request will not be entertained</p>
+</div>
 
 
     <div class="tags">
@@ -457,26 +908,144 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
 
 </div>
 
-<hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2019 Opus Labs. All rights reserved. <br />
- Site last generated: Apr 13, 2019 <br />
-<p><img src="images/company_logo_dark.png" alt="Company logo"/></p>
+
                 </div>
-            </div>
-</footer>
-
-
-        </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
+                <!-- /.row -->
+            </div>           
+  <!-- /.container -->
 </div>
 <!-- /#main -->
-    </div>
+</div>
+
+<footer>
+  <div class="oval-wrap"><div class="bg-oval"><img src="images/bgoval-dark.svg"></div></div>
+  <div class="row">
+    <div class="col-lg-12 footer" style="text-align: center;">
+     &copy;2020 Opus Labs. All rights reserved. <br />
+      Site last generated: Jul 25, 2020 <br />
+     <p style="margin-top: 20px"><img src="images/company_logo.png" alt="Company logo"/></p>
+   </div>
+ </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	/* ---- particles.js config ---- */
+
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 100,
+        "density": {
+          "enable": false,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.4,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 3,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": true,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 
 </body>
 

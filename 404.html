@@ -7,6 +7,7 @@
 <meta name="description" content="">
 <meta name="keywords" content=" ">
 <title>Page Not Found | Cookfu Ionic Documentation</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,6 +19,7 @@
 <link rel="stylesheet" href="css/boxshadowproperties.css">
 <!-- most color styles are extracted out to here -->
 <link rel="stylesheet" href="css/theme-blue.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -42,6 +44,394 @@
 <![endif]-->
 
 <link rel="alternate" type="application/rss+xml" title="documentation-cookfu" href="opuslabsin.github.io/feed.xml">
+
+<style type="text/css">
+    body {
+        font-family: 'Montserrat', sans-serif;
+        /*font-family: 'Open Sans', sans-serif;*/
+        font-size: 18px;
+    }    
+	.home {
+    	width: 100%;
+        height: 700px;
+        background: -moz-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+        background: -webkit-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+        background: linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+    }
+    .jumbo {
+    	border-radius: initial;
+        margin-bottom: auto;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 260px;
+        right: 0;
+    }
+    #home-title {
+        font-size: 2.9em;
+        text-align: center;
+        color: #fff;
+        font-family: times, arial !important;
+        font-weight: 600;
+    }
+
+    #home-title-txt {
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+        font-family: open-sans, Tahoma, Verdana, sans-serif !important;
+    }
+
+    #scroll-down {
+        position: absolute;
+        left: 50%;
+        top: 300%;
+        z-index: 1;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 700px;
+      background-color: transparent;  
+    }
+
+    .post-content {
+    	padding-top: 100px;
+    }
+
+    div#toc >ul::before {
+    	font-size: 24px;
+    }
+
+    .down-scroll a {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        z-index: 2;
+        display: inline-block;
+        -webkit-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+        color: #fff;
+        font: 400 20px / 1 'Josefin Sans', sans-serif;
+        letter-spacing: .1em;
+        text-decoration: none;
+        transition: opacity .3s;
+        transition-duration: .5s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+
+    #scroll-down a span
+    {
+    	position: absolute;
+    	top: 0;
+    	left: 50%;
+    	width: 45px;
+    	height: 45px;
+    	margin-left: -23px;
+    	border: 1px solid #fff;
+    	border-radius: 100%;
+    	box-sizing: border-box;
+    }
+
+    #scroll-down a span::after
+    {
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	content: '';
+    	width: 16px;
+    	height: 16px;
+    	margin: -12px 0 0 -8px;
+    	border-left: 1px solid #fff;
+    	border-bottom: 1px solid #fff;
+    	-webkit-transform: rotate(-45deg);
+    	transform: rotate(-45deg);
+    	box-sizing: border-box;
+    }
+
+    #scroll-down a span::before
+    {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	z-index: -1;
+    	content: '';
+    	width: 44px;
+    	height: 44px;
+    	box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+    	border-radius: 100%;
+    	opacity: 0;
+    	-webkit-animation: 3s infinite sdb03;
+    	animation: 3s infinite sdb03;
+    	box-sizing: border-box;
+    }
+
+    .down-scroll a:hover
+    {
+    	transition: all 1s ease;
+    	-webkit-transition: 1s ease-out;
+    	-moz-transition: 1s ease-out;
+    	-o-transition: 1s ease-out;
+    	opacity: .5;
+    	transition: all 1s ease;
+    	bottom: 1%;
+    	color: #fff;
+    	-webkit-transition: 1s ease-out;
+    	-moz-transition: 1s ease-out;
+    	-o-transition: 1s ease-out;
+    	opacity: .5;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .nav div.logo {
+        float: left;
+        width: auto;
+        height: auto;
+        padding-left: 3rem;
+    }
+
+    .nav {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        line-height: 40px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease;
+        z-index: 9999 !important;
+    }
+
+    footer {
+        color: #fff;
+        background-color: #2171B6;
+        padding-top: 137px;
+        padding-bottom: 40px;    
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 0;
+    }
+
+    .oval-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 232px;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .bg-oval {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        min-width: 2424px;
+        height: 866px;
+    }
+    .bg-oval img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #footer-cta {
+        overflow: visible;
+        text-align: center;
+        padding-top: 438px;
+        padding-bottom: 19px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #footer-cta .bg-wrap {
+        height: 460px;
+    }
+    .bg-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #footer-cta .background {
+        width: 605px;
+        margin-left: -302px;
+    }
+    .background.cn {
+        left: 50%;
+        width: 1800px;
+        margin-left: -900px;
+    }
+    .basic-scaler {
+        transform-origin: center top;
+    }
+    .background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    #footer-cta.on .blob {
+        -webkit-animation: floatY infinite 10s ease-in-out;
+        -moz-animation: floatY infinite 10s ease-in-out;
+        animation: floatY infinite 10s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+    #footer-cta .blob[data-num="1"] {
+        width: 150px;
+        left: 50px;
+        top: 242px;
+    }
+    .part {
+        position: absolute;
+        left: 40px;
+        top: 0;
+    }
+    #footer-cta .background .main {
+        width: 505px;
+    }
+
+    .part img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #footer-cta.on .blob[data-num="2"] {
+        animation-delay: -5s;
+    }
+    #footer-cta.on .blob {
+        -webkit-animation: floatY infinite 10s ease-in-out;
+        -moz-animation: floatY infinite 10s ease-in-out;
+        animation: floatY infinite 10s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+    #footer-cta .blob[data-num="2"] {
+        width: 130px;
+        left: 410px;
+        top: 65px;
+    }
+
+    #footer-cta.on .blob[data-num="2"] img {
+        animation-delay: -4s;
+    }
+    #footer-cta.on .blob img {
+        -webkit-animation: aboutWheelSpin infinite 15s linear;
+        -moz-animation: aboutWheelSpin infinite 15s linear;
+        animation: aboutWheelSpin infinite 15s linear;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+
+    #footer-cta .man {
+        width: 140px;
+        left: 355px;
+        top: 120px;
+    }
+
+    .documentation {
+        padding-bottom: 100px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .section-col {
+        /*margin-top: 150px;*/
+    }
+
+    .section-title, #introduction {
+        font-size: 33px;
+        line-height: 1.55;    
+        margin-bottom: 20px;
+        color: #2171B6;
+        font-family: times, arial;
+    }
+
+    .letter {
+      display: inline-block;
+      line-height: 1em;
+    }
+
+    .seperator {
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: 992px) {
+        .section-col {
+            margin-top: 80px;
+        }
+    }
+
+    @-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+    @keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+    @keyframes floatY {
+      0% {
+        transform: translateY(-20px);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+    .float-y {
+      -webkit-animation: floatY infinite 10s ease-in-out;
+      -moz-animation: floatY infinite 10s ease-in-out;
+      animation: floatY infinite 10s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes aboutWheelSpin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .about-wheelspin {
+      -webkit-animation: aboutWheelSpin infinite 15s linear;
+      -moz-animation: aboutWheelSpin infinite 15s linear;
+      animation: aboutWheelSpin infinite 15s linear;
+      animation-fill-mode: forwards;
+    }
+
+</style>
 
     <script>
         $(document).ready(function() {
@@ -95,55 +485,39 @@
 
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-static-top" style="min-height:75px;">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img style="height:50px;" src="images/company_logo.png" alt="Company logo"/></a>
+    <nav class="nav">
+        <div class="container-fluid">
+            <div class="logo"><a href="#"><img src="images/company_logo.png" alt=""></a>
+            </div>            
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right" style="margin-top:12px;">
-                <!-- toggle sidebar button -->
-                <!--<li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>-->
-                <!-- entries without drop-downs appear here -->
+    </nav>
+    <!-- Page Content -->
+    <section class="home">
+        <div class="area">
+            <div id="particles-js"></div>
+            <div class="jumbo">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p id="home-title"><span class="letter">Page Not Found</span></p>
+                            <p id="home-title-txt"></p>
+                        </div>                        
+                        <section id="scroll-down" class="down-scroll"><a href="#introduction"><span class="mx-auto"></span></a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container documentation">
+          <div id="main">
 
-
-
-
+            <!-- Content Row -->
+            <div class="row">
                 
                 
-                
-                <li><a href="https://opuslabs.freshdesk.com/" target="_blank">Support</a></li>
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
-            </ul>
-        </div>
-        </div>
-        <!-- /.container -->
-</nav>
-
-<!-- Page Content -->
-<div class="container">
-  <div id="main">
-
-    <!-- Content Row -->
-    <div class="row">
-        
-        
-            <!-- Sidebar Column -->
-            <div class="col-md-3" id="tg-sb-sidebar">
-                
+                <!-- Sidebar Column -->
+                <div class="col-md-3" id="tg-sb-sidebar">
+                    
 
 <ul id="mysidebar" class="nav">
   <li class="sidebarTitle"> </li>
@@ -197,17 +571,13 @@
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
-            </div>
-            
-        
+                </div>
+                
+                
 
-        <!-- Content Column -->
-        <div class="col-md-9" id="tg-sb-content">
-            <div class="post-header">
-   <h1 class="post-title-main">Page Not Found</h1>
-</div>
-
-
+                <!-- Content Column -->
+                <div class="col-md-9" id="tg-sb-content">
+                    
 
 <div class="post-content">
 
@@ -256,26 +626,144 @@ $('#toc').on('click', 'a', function() {
 
 </div>
 
-<hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2019 Opus Labs. All rights reserved. <br />
- Site last generated: Apr 13, 2019 <br />
-<p><img src="images/company_logo_dark.png" alt="Company logo"/></p>
+
                 </div>
-            </div>
-</footer>
-
-
-        </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
+                <!-- /.row -->
+            </div>           
+  <!-- /.container -->
 </div>
 <!-- /#main -->
-    </div>
+</div>
+
+<footer>
+  <div class="oval-wrap"><div class="bg-oval"><img src="images/bgoval-dark.svg"></div></div>
+  <div class="row">
+    <div class="col-lg-12 footer" style="text-align: center;">
+     &copy;2020 Opus Labs. All rights reserved. <br />
+      Site last generated: Jul 25, 2020 <br />
+     <p style="margin-top: 20px"><img src="images/company_logo.png" alt="Company logo"/></p>
+   </div>
+ </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	/* ---- particles.js config ---- */
+
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 100,
+        "density": {
+          "enable": false,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.4,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 3,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": true,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 
 </body>
 
